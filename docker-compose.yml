@@ -27,4 +27,15 @@ services:
     ports:
       - 8080:80
 
+    
+  client-interface:
+    build:
+      context: client-interface/
+      dockerfile: ./Dockerfile
+    container_name: cliet-interface
+    restart: unless-stopped
+    networks:
+        - main_network
+    ports:
+      - 8081:80
 
