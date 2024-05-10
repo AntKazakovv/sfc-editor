@@ -1,0 +1,30 @@
+version: "3.9"
+
+networks:
+  main_network:
+
+services:
+  backend:
+    build:
+      context: api-server/
+      dockerfile: ./Dockerfile
+    container_name: backend
+    restart: unless-stopped
+    networks:
+        - main_network
+
+    ports:
+      - 3000:3000
+
+  admin-interface:
+    build:
+      context: admin-interface/
+      dockerfile: ./Dockerfile
+    container_name: admin-interface
+    restart: unless-stopped
+    networks:
+        - main_network
+    ports:
+      - 8080:80
+
+
