@@ -3,7 +3,7 @@
 import { defineComponent, ref, h, onMounted } from 'vue'
 import type ComponentData from "../models/componentData"
 import { fetchComponentData, fetchComponentTemplate } from '@/utils/fetch'
-import { Either, left, right } from '@/utils/result'
+import { Either } from '@/utils/result'
 import {extractTemplate, extractStyle} from '@/utils/functions'
 
 let defaultTemplate = `

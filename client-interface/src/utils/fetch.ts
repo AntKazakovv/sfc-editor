@@ -1,4 +1,4 @@
-import { Either, left, right, type Result } from "./result";
+import { Either, left, right } from "./result";
 import type ComponentData from "@/models/componentData";
 
 const baseUrl = "http://localhost:3000";

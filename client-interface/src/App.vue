@@ -16,7 +16,7 @@ import CustomComponent from './components/CustomComponent.vue'
   main {
     display: flex;
     place-items: center;
-    padding: 10% 37%;
+    padding: 10% 42%;
   }
 
   .wrapper {
